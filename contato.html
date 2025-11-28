@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Minha Playlist</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="icon" type="img/png" href="fotos/logo.png">
+    <script language="javascript" type="text/javascript">
+		function validar() {
+			var nome = form1.nome.value;
+			var email = form1.email.value;
+			var telefone = form1.telefone.value;
+			var assunto = form1.assunto.value;
+
+			if (nome == "") {
+				alert('por favor, preencha o campo seu nome!!');
+				form1.nome.focus();
+				return false;
+			}
+
+			if (nome.length <= 5) {
+				alert('por favor, preencha o campo seu nome completo!!');
+				form1.nome.focus();
+				return false;
+			}
+
+			if (email == "") {
+				alert('por favor, preencha o campo seu email!!');
+				form1.email.focus();
+				return false;
+			}
+
+			if (telefone == "") {
+				alert('por favor, preencha o campo seu telefone!!');
+				form1.telefone.focus();
+				return false;
+			}
+
+			if (assunto == "") {
+				alert('por favor, preencha o campo com o assunto a ser tratado!!');
+				form1.assunto.focus();
+				return false;
+			}
+		}
+	</script>
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <ul>
+                <li><a href="minha_playlist.html">Home</a></li>
+                <li><a href="genero1.html">Rock</a></li>
+                <li><a href="genero2.html">Pagode</a></li>
+                <li><a href="genero3.html">Pop</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+    <center>
+		<h1>Contato</h1>
+		<form name="form1" action="Aviso-contato.html" method="post">
+			Nome <input type="text" name="nome">
+			<br><br>
+			E-mail <input type="link" name="email">
+			<br><br>
+			Telefone <input type="number" name="telefone">
+			<br><br>
+			Assunto <input type="text" name="assunto">
+			<br><br>
+			<textarea cols="50" rows="15" name="comentario"> Envie sua duvida...</textarea>
+			<br><br><br>
+			<input type="submit" onclick="return validar()" value="Enviar">
+			<input type="reset" name="limpa" value="Limpar">
+		</form>
+	</center>
+    <br>
+    <footer>
+        <h5> Lucas Santos 2023 - &copyTodos os direitos reservados</h5>
+    </footer>
+</body>
+
+</html>
